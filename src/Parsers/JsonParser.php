@@ -10,7 +10,7 @@ use JsonException;
 final class JsonParser implements ParserContract
 {
     public function __construct (
-        private readonly string $content,
+        private readonly mixed $content,
     ) {}
 
     /**
