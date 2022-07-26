@@ -9,3 +9,5 @@ parameters:
     excludePaths:
 
     treatPhpDocTypesAsCertain: false
+
+    checkGenericClassInNonGenericObjectType: false

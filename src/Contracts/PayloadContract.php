@@ -16,7 +16,7 @@ interface PayloadContract
     ): PayloadContract;
 
     /**
-     * @return array
+     * @return array<int|string,mixed>
      */
     public function parse(): array;
 

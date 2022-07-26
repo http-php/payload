@@ -9,18 +9,19 @@ use JsonException;
 
 final class JsonParser implements ParserContract
 {
-    public function __construct (
+    public function __construct(
         private readonly mixed $content,
-    ) {}
+    ) {
+    }
 
     /**
-     * @return array
+     * @return array<int|string,mixed>
      * @throws JsonException
      */
     public function parse(): array
     {
         return (array) json_decode(
-            json: $this->content,
+            json: strval($this->content),
             associative: true,
             depth: 512,
             flags: JSON_THROW_ON_ERROR,
