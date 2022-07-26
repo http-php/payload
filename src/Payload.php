@@ -22,7 +22,7 @@ final class Payload implements PayloadContract
         return new Payload(
             body: $body,
             parser : $parser ?? new JsonParser(
-                content: (string) json_encode(
+                content: json_encode(
                     value: $body,
                 ),
             ),
