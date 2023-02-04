@@ -7,10 +7,10 @@ namespace HttpPHP\Payload\Parsers;
 use HttpPHP\Payload\Contracts\ParserContract;
 use JsonException;
 
-final class JsonParser implements ParserContract
+final readonly class JsonParser implements ParserContract
 {
     public function __construct(
-        private readonly mixed $content,
+        private mixed $content,
     ) {
     }
 
