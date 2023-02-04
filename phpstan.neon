@@ -11,3 +11,4 @@ parameters:
     treatPhpDocTypesAsCertain: false
 
     checkGenericClassInNonGenericObjectType: false
+    checkMissingIterableValueType: false

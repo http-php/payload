@@ -12,22 +12,22 @@ use Throwable;
 final class Payload implements PayloadContract
 {
     /**
-     * @param mixed $body
+     * @param string|array $body
      * @param ParserContract $parser
      */
     public function __construct(
-        private readonly mixed $body,
+        private readonly string|array $body,
         private ParserContract $parser,
     ) {
     }
 
     /**
-     * @param mixed $body
+     * @param string|array $body
      * @param ParserContract|null $parser
      * @return PayloadContract
      */
     public static function make(
-        mixed $body,
+        string|array $body,
         null|ParserContract $parser = null,
     ): PayloadContract {
         return new Payload(
@@ -39,7 +39,7 @@ final class Payload implements PayloadContract
     }
 
     /**
-     * @return array<int|string,mixed>
+     * @return array<int|string,string|array>
      * @throws Throwable
      */
     public function parse(): array
@@ -48,9 +48,9 @@ final class Payload implements PayloadContract
     }
 
     /**
-     * @return mixed
+     * @return string|array
      */
-    public function body(): mixed
+    public function body(): string|array
     {
         return $this->body;
     }

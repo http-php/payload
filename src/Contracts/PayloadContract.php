@@ -7,21 +7,21 @@ namespace HttpPHP\Payload\Contracts;
 interface PayloadContract
 {
     /**
-     * @param mixed $body
+     * @param string|array $body
      * @return PayloadContract
      */
     public static function make(
-        mixed $body,
+        string|array $body,
         null|ParserContract $parser = null,
     ): PayloadContract;
 
     /**
-     * @return array<int|string,mixed>
+     * @return array<int|string,string|array>
      */
     public function parse(): array;
 
     /**
-     * @return mixed
+     * @return string|array
      */
-    public function body(): mixed;
+    public function body(): string|array;
 }

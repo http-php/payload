@@ -9,7 +9,7 @@ use Throwable;
 interface ParserContract
 {
     /**
-     * @return array<int|string,mixed>
+     * @return array<int|string,string|array>
      * @throws Throwable
      */
     public function parse(): array;
